@@ -1,0 +1,2066 @@
+.cursor-glow {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: rgb(238, 174, 202);
+    background: -moz-radial-gradient(circle, rgba(238, 174, 202, 0.8) 0%, rgba(238, 174, 202, 0.2) 100%);
+    box-shadow: 0px 0px 20px rgba(238, 174, 202, 1);
+    background: radial-gradient(circle, rgba(238, 174, 202, 0.8) 0%, rgba(238, 174, 202, 0.2) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: sticky !important;
+}
+
+.bacgraund-img {
+    /* border-image: fill 0 linear-gradient(rgba(22, 22, 255, 0.1), #0d0d1e); */
+    background-image: url("img/Mask group.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* height: 100vh !important; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0 !important;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .bacgraund-img {
+        /* border-image: fill 0 linear-gradient(rgba(22, 22, 255, 0.1), #0d0d1e); */
+        background-image: url("img/Group 3.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 110vh !important;
+        border: 1px solid;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 0 !important;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .bacgraund-img {
+        /* border-image: fill 0 linear-gradient(rgba(22, 22, 255, 0.1), #0d0d1e); */
+        background-image: url("img/bg-sm.png") !important;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 110vh !important;
+        border: 1px solid;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 0 !important;
+    }
+}
+
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+body {
+    background-color: #020103 !important;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styles */
+
+
+/* /* Navbar Styles */
+
+.navbar {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px !important;
+    height: 60px;
+    margin: 1rem auto;
+    border-radius: 15px;
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        width: 100% !important;
+        border: none;
+    }
+}
+
+
+/* .logo .icon {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #b84cff, #5500ff);
+    border-radius: 50%;
+    box-shadow: 0 0 8px #b84cff;
+} */
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.nav-links li {
+    position: relative;
+    /* margin-top: .5rem; */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-links li a:hover {
+    opacity: 1;
+}
+
+
+/* Dropdown Arrow Styling */
+
+.arrow {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(225deg);
+    /* Down arrow */
+}
+
+
+/* Dropdown Arrow Styling */
+
+.arrow {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(225deg);
+    /* Down arrow */
+}
+
+
+/* Dropdown Menu Styling */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 14px;
+    display: block;
+    transition: opacity 0.5s;
+}
+
+.dropdown-menu li a:hover {
+    opacity: 1;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #000;
+}
+
+
+/* Join Button */
+
+.join-btn {
+    padding: 8px 20px;
+    background-color: #3a1d68;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: inset 0 1px 5px 0px #f3f0f7;
+}
+
+.join-btn:hover {
+    background-color: #5500ff;
+    transform: scale(1.05);
+}
+
+
+/* Hamburger Button */
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #111;
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .join-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+}
+
+
+/* nav */
+
+.a-flex {
+    margin: auto;
+}
+
+.new {
+    width: 300px;
+    height: 2.5rem;
+    border-radius: 5rem;
+    border: 1px solid #262626;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #9855ff;
+}
+
+
+/* @media (min-width: 768px) and (max-width: 1024px) {
+    .new {
+        width: 80%;
+    }
+} */
+
+@media (max-width: 767px) {
+    .new {
+        width: 70% !important;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 8.333333%;
+    }
+}
+
+.new span {
+    width: 50px;
+    height: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5rem;
+    padding-bottom: 0px !important;
+    display: inline-block;
+    color: #000 !important;
+    background-color: #9855ff;
+}
+
+.new2 {
+    width: 200px;
+    height: 2.5rem;
+    border-radius: 5rem;
+    border: 1px solid #262626;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #9855ff;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .all-text {
+        margin-top: 7rem !important;
+    }
+}
+
+.seo-text {
+    font-size: 5rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: #fff;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .seo-text {
+        width: 75%;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .seo-text {
+        font-size: 54px !important;
+        margin-left: 8.333333%;
+    }
+}
+
+.teams-text {
+    width: 30%;
+    color: #707071;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .teams-text {
+        width: 35%;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .teams-text {
+        width: 100% !important;
+    }
+}
+
+.h-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .h-text {
+        width: 80% !important;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .h-text {
+        width: 80% !important;
+        margin-left: 8.333333%;
+    }
+    .h-text .text-2 {
+        font-size: 20px !important;
+        font-weight: 300;
+    }
+}
+
+.text-2 {
+    color: #fff;
+    font-size: 1.4rem !important;
+    text-align: left !important;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .text-2 {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-align: left !important;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .text-2 {
+        color: #fff;
+        font-size: .5rem;
+        text-align: left !important;
+    }
+}
+
+.text-3 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left !important;
+}
+
+.a {
+    font-size: 1rem;
+    color: #767677;
+    font-weight: 300 !important;
+}
+
+
+/* form */
+
+.form {
+    width: 56.5%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative !important;
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .form {
+        width: 80%;
+        display: block;
+        margin-left: 8.333333%;
+    }
+}
+
+.inp {
+    display: flex;
+    padding: 25px 15px 25px 15px !important;
+    background-color: transparent !important;
+    color: #757a80;
+    border-radius: 10px !important;
+    font-weight: 500 !important;
+    border: 1px solid !important;
+}
+
+.inp:focus {
+    border-color: #7c4dff !important;
+}
+
+.email {
+    position: absolute !important;
+    z-index: 10;
+    left: 1.5rem !important;
+}
+
+.subscribe {
+    width: 150px;
+    font-weight: 600 !important;
+    position: absolute !important;
+    right: .5rem !important;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .subscribe {
+        border: 1px solid;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .subscribe {
+        width: 100% !important;
+        margin-top: 1rem !important;
+        left: 0;
+        border: 1px solid;
+    }
+}
+
+
+/* @media(max-width:800px) {
+    .subscribe {
+        width: 100px;
+        font-weight: 600 !important;
+        position: absolute !important;
+        right: 1.5rem !important;
+    }
+} */
+
+.btn-white3 {
+    width: 8rem;
+    padding: .5rem !important;
+    border-radius: 10px !important;
+}
+
+.team-icon {
+    width: 150px;
+    aspect-ratio: 4/1;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mb-4 {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mb-4 {
+        margin-top: 2rem;
+    }
+}
+
+.marquee {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .marquee {
+        width: 58.3%;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .marquee {
+        width: 58.3%;
+    }
+}
+
+
+/* form */
+
+canvas {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    height: 350px !important;
+}
+
+.title {
+    width: 100% !important;
+    /* height: 25px !important; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 24px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    z-index: 1000 !important;
+    border: 1px solid #100f11;
+}
+
+.title2 {
+    width: 48.4%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 24px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #100f11;
+}
+
+.trafic-text {
+    color: #8c8b8c !important;
+    font-size: 15px;
+}
+
+.traffic-increase {
+    font-size: 2rem !important;
+    font-weight: 500;
+    color: #fff;
+}
+
+.traffic-increase2 {
+    font-size: 15px;
+    color: #02c479;
+}
+
+@keyframes color-mix {
+    0% {
+        color: #1f0f38;
+    }
+    /* 50% {
+        color: #452579;
+    } */
+    100% {
+        color: #7036df;
+    }
+}
+
+.c-mix {
+    margin-top: 2.5rem;
+    animation: color-mix 1.8s linear infinite alternate;
+    box-shadow: 0 0 40px 10px currentColor;
+    border-radius: 8px;
+}
+
+
+/* sidebar */
+
+
+/* Sidebar asosiy konteyner */
+
+.sidebar {
+    background-color: #020104;
+    border: 1px solid;
+    /* width: 300px; */
+    height: 98%;
+    border-radius: 15px 0 0 15px;
+    color: #888;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Yuqoridagi tugmalar */
+
+.top-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.circle.red {
+    background-color: #fc605c;
+}
+
+.circle.yellow {
+    background-color: #fdbc40;
+}
+
+.circle.green {
+    background-color: #34c749;
+}
+
+
+/* Menyu elementi */
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Silliq o'tish */
+}
+
+.menu-item i {
+    font-size: 13px !important;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Aktiv element fon rangi */
+    color: #fff;
+    /* Matn rangi oq */
+    font-weight: bold;
+}
+
+
+/* Aktiv (tanlangan) menyu elementi */
+
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* sidebar */
+
+
+/* input-search */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Input va button orasidagi masofa */
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        margin: 0;
+    }
+}
+
+
+/* Input Styling */
+
+.search-input {
+    width: 260px;
+    padding: 5px 10px;
+    padding-right: 50px;
+    /* Ikonka uchun joy */
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #111;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #777;
+}
+
+.search-input:focus {
+    border-color: #7c4dff;
+}
+
+
+/* Search Icon Styling */
+
+.search-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    fill: #777;
+    pointer-events: none;
+    /* Ikonkaga bosishni bloklash */
+    margin-left: -40px;
+    /* Input ichida chiqishi uchun */
+}
+
+
+/* Button Styling */
+
+.search-button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7c4dff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .search-button {
+        margin-left: 5rem;
+    }
+}
+
+.search-button:hover {
+    background-color: #5a2eff;
+}
+
+.search-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+
+/* input-search */
+
+.hr {
+    background-color: #141315;
+}
+
+
+/* DATE */
+
+
+/* Calendar Button Styles */
+
+.calendar-container {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.calendar-container:hover {
+    background-color: #222;
+    border-color: #7c4dff;
+}
+
+.calendar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: #777;
+}
+
+.calendar-text {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-text span {
+    margin: 0 5px;
+    color: #aaa;
+}
+
+
+/* Modal Styles */
+
+.modal {
+    width: 350px !important;
+    height: 350px !important;
+    display: none;
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-header {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-day {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #333;
+    color: #aaa;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-day:hover {
+    background-color: #7c4dff;
+    color: #fff;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+
+/* Close Button */
+
+.close-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right;
+}
+
+.close-btn:hover {
+    background-color: #7c4dff;
+}
+
+
+/* DATE */
+
+.keywords-container {
+    background-color: #2a2a3b;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+
+/* Header Section */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.value {
+    font-size: 24px;
+    display: flex;
+    align-items: baseline;
+}
+
+.value strong {
+    font-size: 24px;
+}
+
+.percentage {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+
+/* Top Keywords */
+
+.top-keywords {
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.keywords-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.keyword-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.icon {
+    color: #888;
+    margin-right: 10px;
+    font-size: 10px;
+}
+
+.keyword-text {
+    font-size: 14px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #e0e0e0;
+    /* Textning rangi bir xillik uchun */
+}
+
+.menu-dots {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+
+/* Hover Effects for Menu Dots */
+
+.menu-dots:hover {
+    color: #fff;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .value {
+        font-size: 20px;
+    }
+    .keywords-list {
+        font-size: 12px;
+    }
+    .menu-dots {
+        font-size: 16px;
+    }
+}
+
+
+/* General Styles */
+
+
+/* Container */
+
+.keywords-container {
+    width: 48.4%;
+    background-color: #030104;
+    border-radius: 10px;
+    padding: 20px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+    max-width: 600px;
+    border: 1px solid;
+}
+
+@media (max-width: 768px) {
+    .keywords-container {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+.br-g {
+    position: relative;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    border-radius: 0.8rem;
+    margin-left: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(to left, #051e06, #2e1630);
+    }
+}
+
+@media (max-width: 768px) {
+    .br-g {
+        margin-left: 0 !important;
+    }
+}
+
+.br-g2 {
+    position: relative;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    border-radius: 15px 0 0 15px;
+    margin-left: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(to left, #051e06, #2e1630);
+    }
+}
+
+.br-g3 {
+    position: relative;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    border-radius: 15px 0 0 15px;
+    /* margin-left: 1.5rem !important; */
+    margin-bottom: 1.5rem !important;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(to left, #051e06, #2e1630);
+    }
+}
+
+
+/* Header Section */
+
+.title3 {
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    color: #8e8e8f !important;
+}
+
+.value b {
+    font-size: 35px !important;
+    font-weight: 500;
+    display: inline-block;
+    align-items: baseline !important;
+}
+
+.value span {
+    font-size: 15px !important;
+    font-weight: 500;
+    display: inline-block;
+    align-items: baseline !important;
+}
+
+
+/*     
+    .value strong {
+        font-size: 24px;
+    }
+     */
+
+.percentage {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+
+/* Top Keywords */
+
+.top-keywords {
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+    color: #fff !important;
+}
+
+.keywords-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.keyword-item2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 0; */
+    /* border-bottom: 1px solid #333; */
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 1px solid;
+    border-radius: 50%;
+    color: #888;
+    margin-right: 10px;
+    /* font-size: 10px; */
+}
+
+.icon-circle {
+    width: .5rem !important;
+    height: .5rem !important;
+    display: inline-block;
+    background-color: #999;
+    border-radius: 50%;
+    margin: auto !important;
+}
+
+.keyword-text {
+    font-size: 16px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #818082;
+    /* Textning rangi bir xillik uchun */
+}
+
+.menu-dots {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+
+/* Hover Effects for Menu Dots */
+
+.menu-dots:hover {
+    color: #fff;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .value {
+        font-size: 20px;
+    }
+    .keywords-list {
+        font-size: 12px;
+    }
+    .menu-dots {
+        font-size: 16px;
+    }
+}
+
+
+/* CHART-2 */
+
+.chart-text {
+    width: 40%;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .chart-text {
+        width: 60%;
+    }
+    .chart-text h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .chart-text {
+        width: 60%;
+    }
+    .chart-text h2 {
+        font-size: 26px;
+    }
+}
+
+.chart-container {
+    width: 48.4%;
+    height: 380px !important;
+    background-color: #030104;
+    border-radius: 10px;
+    max-width: 600px;
+    /* border: 1px solid; */
+    color: #fff;
+    padding: 20px;
+}
+
+.chart-title {
+    /* font-size: 18px; */
+    margin-bottom: 5px;
+    color: #8c8b8c !important;
+    font-size: 15px;
+}
+
+.chart-percentage {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.chart-growth {
+    color: #4caf50;
+    font-size: 14px;
+}
+
+#chart2 {
+    display: block;
+    width: 100%;
+    /* border: 1px solid; */
+    padding: 0 !important;
+    height: 250px !important;
+    margin-top: 20px;
+}
+
+
+/* CHART-2 */
+
+.setting-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px;
+    overflow: hidden !important;
+    border: 1px solid #1f1e22;
+}
+
+.setting-icon img {
+    /* width: 35px !important;
+    height: 35px !important; */
+    width: 100%;
+}
+
+
+/* CHART-RESPONSIVE */
+
+
+/* Katta ekranlar uchun (default qoidalar qoladi) */
+
+
+/* O'rta ekranlar uchun (planshetlar: 768px dan kichik) */
+
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+        /* Bo'lim to'liq kenglikka moslashadi */
+        height: auto;
+        /* Avtomatik balandlik */
+        padding: 15px;
+        /* Ichki bo'shliqni moslash */
+    }
+    .chart-title {
+        font-size: 14px;
+        /* Sarlavha hajmini kichraytirish */
+    }
+    .chart-percentage {
+        font-size: 24px;
+        /* Raqam hajmini kichraytirish */
+    }
+    .chart-growth {
+        font-size: 12px;
+        /* O'sish foiz hajmini moslashtirish */
+    }
+    #chart2 {
+        height: 200px !important;
+        /* Grafik balandligini moslash */
+    }
+    .top-keywords ul {
+        padding-left: 0;
+        /* Bo'sh joyni kamaytirish */
+    }
+    .keyword-item2 {
+        font-size: 14px;
+        /* Matn hajmini moslashtirish */
+        margin-bottom: 8px;
+        /* Elementlar orasidagi masofa */
+    }
+    .menu-dots {
+        font-size: 12px;
+        /* Uch nuqta hajmini moslashtirish */
+    }
+}
+
+
+/* Kichik ekranlar uchun (mobil: 480px dan kichik) */
+
+@media (max-width: 480px) {
+    .chart-container {
+        padding: 10px;
+        /* Minimal bo'shliq */
+    }
+    .chart-title {
+        font-size: 12px;
+        /* Sarlavha hajmini kichraytirish */
+    }
+    .chart-percentage {
+        font-size: 20px;
+        /* Raqam hajmini kichraytirish */
+    }
+    .chart-growth {
+        font-size: 10px;
+        /* Foiz hajmini moslashtirish */
+    }
+    #chart2 {
+        height: 150px !important;
+        /* Grafik balandligini kamaytirish */
+    }
+    .top-keywords ul {
+        font-size: 12px;
+        /* Kichik ekranlar uchun matn hajmi */
+    }
+    .keyword-item2 {
+        display: flex;
+        /* Ikkilik qator joylashuv */
+        justify-content: space-between;
+        font-size: 12px;
+        /* Matn hajmini moslashtirish */
+    }
+    .menu-dots {
+        font-size: 10px;
+        /* Uch nuqta hajmini moslashtirish */
+    }
+}
+
+@media (max-width: 768px) {
+    .cht {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* CHART-RESPONSIVE */
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 1.5rem !important;
+    margin-top: 5rem !important;
+}
+
+.text-card {
+    width: 100%;
+}
+
+.text-card span {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500 !important;
+    line-height: 2.5rem;
+}
+
+.text-card p {
+    color: #b3b3b3;
+    /* font-weight: 400 !important; */
+}
+
+@keyframes shadow-mix {
+    0% {
+        color: #1f0f38;
+    }
+    /* 50% {
+        color: #452579;
+    } */
+    80% {
+        color: #7036df;
+    }
+}
+
+.avatar-card {
+    height: 70vh;
+    border-radius: 10px;
+    border: 1px solid #282729 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto !important;
+    position: relative !important;
+}
+
+.carusel-position {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+
+/* 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .carusel-position {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+    }
+} */
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .carusel-position {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+    }
+    .carusel-position img {
+        width: 173px;
+        height: 173px;
+        margin: auto;
+    }
+}
+
+.avatar-son {
+    width: 35%;
+    border: 0px !important;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .avatar-son {
+        width: 45%;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .avatar-son {
+        width: 90%;
+    }
+}
+
+.bg-shadow {
+    width: 100% !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+}
+
+.avatar-text {
+    font-size: 25px !important;
+    color: #fff !important;
+    font-weight: 400;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .avatar-text {
+        font-size: 23px !important;
+        color: #fff !important;
+        font-weight: 400;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .avatar-text {
+        font-size: 20px !important;
+        color: #fff !important;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.avatar-text2 {
+    font-size: 20px !important;
+    color: #fff !important;
+    font-weight: 400;
+    /* margin-top: 2rem !important; */
+}
+
+.avatar-text2 a {
+    color: #746d7f;
+    font-size: 15px;
+}
+
+.p-text {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #fff;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .p-text {
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #fff;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .p-text {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #fff;
+    }
+}
+
+.hr-p {
+    margin-top: 100px;
+}
+
+.p-text2 {
+    font-size: 20px !important;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 1rem !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .p-text2 {
+        font-size: 14px !important;
+        color: #fff;
+        font-weight: 400;
+        margin-top: 1rem !important;
+    }
+    .hr-p {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 767px) {
+    .p-text2 {
+        font-size: 11px !important;
+        color: #fff;
+        font-weight: 400;
+        margin-top: 1rem !important;
+    }
+}
+
+.pricing-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .pricing-row {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .pricing-son {
+        width: 25% !important;
+        /* border: 1px solid; */
+        position: relative !important;
+        transition: 0.3s, transform 1s;
+        border-radius: 10px;
+        padding: 0px !important;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .pricing-son {
+        width: 33% !important;
+        /* border: 1px solid; */
+        position: relative !important;
+        transition: 0.3s, transform 1s;
+        border-radius: 10px;
+        padding: 0px !important;
+    }
+    .pricing-son:first-child {
+        display: none;
+    }
+    .pricing-son:hover {
+        scale: 1.01 !important;
+        background-color: rgba(20, 11, 39, 1);
+    }
+}
+
+.pricing {
+    border-radius: 10px;
+    border: 1px solid #282729 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .pricing {
+        border: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricing {
+        border: 0 !important;
+    }
+}
+
+.pricing-son {
+    width: 21%;
+    position: relative !important;
+    transition: 0.3s, transform 1s;
+    border-radius: 10px;
+}
+
+.pricing-son:hover {
+    scale: 1.02;
+    background-color: rgba(20, 11, 39, 1);
+}
+
+.price-text {
+    font-weight: 400;
+    font-size: 30px !important;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .price-text {
+        font-weight: 400;
+        font-size: 24px !important;
+        color: #fff;
+        margin-left: 1rem;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .price-text {
+        font-weight: 400;
+        font-size: 22px !important;
+        color: #fff;
+        margin-left: 1rem;
+    }
+}
+
+.p-text2 {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 1rem;
+}
+
+.price-btn {
+    padding: 8px 20px;
+    background-color: #191819;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: inset 0 1px 5px 0px #f3f0f7;
+    margin-left: 1rem;
+}
+
+.price-btn:hover {
+    background-color: #3a1d68;
+    transform: scale(1.05);
+}
+
+.pricing-son hr {
+    width: 100% !important;
+    background-color: #282729;
+    /* position: absolute; */
+    /* height: ; */
+}
+
+
+/* AI */
+
+.ai-card {
+    height: 80vh;
+    border-radius: 10px;
+    border: 1px solid #282729 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto !important;
+    position: relative !important;
+}
+
+.ai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ai h1 {
+    z-index: 10;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/* Planshetlar uchun (768px - 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ai h1 {
+        font-size: 56px;
+    }
+    .ai span {
+        font-size: 20px !important;
+    }
+    .f-text {
+        font-size: 13px !important;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .ai h1 {
+        font-size: 26px;
+    }
+    .ai span {
+        font-size: 20px !important;
+    }
+}
+
+.ai span {
+    z-index: 10;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.ai-btn {
+    width: 130px !important;
+    padding: 8px 20px;
+    background-color: #3a1d68;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: inset 0 1px 5px 0px #f3f0f7;
+    margin-left: 1rem;
+}
+
+.ai-btn:hover {
+    background-color: #191819;
+    transform: scale(1.05);
+}
+
+.bg-shadow2 {
+    width: 100% !important;
+    height: 80vh;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+
+/* /AI */
+
+.sm-icon {
+    display: none !important;
+    justify-content: space-evenly !important;
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .sm-icon {
+        display: flex !important;
+        justify-content: space-evenly !important;
+    }
+}
+
+.sm-icon2 {
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .sm-icon2 {
+        display: none !important;
+    }
+    .f-card {
+        margin-left: 1.6rem !important;
+        margin-top: 1.5rem !important;
+    }
+}
+
+.f-card {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.f-text {
+    color: #707071 !important;
+    text-decoration: none !important;
+}
+
+
+/* Scroll-css */
+
+.scroll-container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+.slide-left {
+    z-index: 0 !important;
+    animation: slideLeftAnimation both;
+    animation-timeline: view();
+    display: block;
+}
+
+@media (min-width: 768px) and (max-width: 1195px) {
+    .slide-left {
+        display: none;
+    }
+}
+
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
+    .slide-left {
+        display: none;
+    }
+}
+
+@keyframes slideLeftAnimation {
+    0% {
+        /* transform: translateY(-950px); */
+        transform: translateX(600px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+.slide-right {
+    animation: slideRightAnimation both;
+    animation-timeline: view();
+}
+
+@keyframes slideRightAnimation {
+    0% {
+        transform: translateX(-1000px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+}
+
+
+/* Scroll-css */
+
+.wow:first-child {
+    visibility: hidden;
+}
+
+
+/* Scroll-css */
+
+.logo-image {
+    width: 100px;
+    z-index: 10;
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateY(-360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+    }
+}
