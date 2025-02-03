@@ -40,7 +40,7 @@ const trafficChart = new Chart(ctx, {
     type: 'line',
     data: trafficData,
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         plugins: {
             legend: { display: false }, // Legenda yashirish

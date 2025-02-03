@@ -821,9 +821,12 @@ canvas {
     transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+
+/* Kichik mobil qurilmalar uchun (0px - 767px) */
+
+@media (max-width: 767px) {
     .search-button {
-        margin-left: 5rem;
+        margin-left: 3rem !important;
     }
 }
 
