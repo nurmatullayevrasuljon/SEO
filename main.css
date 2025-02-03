@@ -826,7 +826,7 @@ canvas {
 
 @media (max-width: 767px) {
     .search-button {
-        margin-left: 3rem !important;
+        margin-left: 2rem !important;
     }
 }
 
