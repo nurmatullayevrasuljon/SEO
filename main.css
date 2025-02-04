@@ -768,6 +768,7 @@ canvas {
         justify-content: space-between;
         margin: 0;
         gap: 40px;
+        border: 4px solid red;
     }
 }
 
